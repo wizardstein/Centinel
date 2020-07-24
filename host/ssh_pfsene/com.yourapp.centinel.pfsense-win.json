@@ -1,0 +1,9 @@
+{
+        "name": "com.yourapp.centinel.pfsense",
+        "description": "Pfsense SSH native host application",
+        "path": "ssh-pfsense.bat",
+        "type": "stdio",
+        "allowed_origins": [
+                "chrome-extension://kbjhjcgnpnokdlhbmhaeiagpocbgjidk/"
+        ]
+}

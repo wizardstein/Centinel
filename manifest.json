@@ -1,0 +1,30 @@
+  {
+    // Extension ID: kbjhjcgnpnokdlhbmhaeiagpocbgjidk
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtdLT3V/X4SIUE+DO+Dwb2abLOt4QbvRO2xpsKVpdGWJF9ID0Q6YeL8Qyn098kFLdscSDaLzhZNeK2G1MU07iUkwzuP50wtm7nOGUy8gL8chfs7yRDEaykhObwdGptRCwDkshuya+EvpLmfdypdgndYqT4Y9rlewrgnr5nB1j2FULGb7gcrcC+iPDin45AeVBDqi4niKJuYDd7NHrgu6TRGDg+ownmOI0bCCYtl/I/D4PJftGfwCNLF/5eC69KLh8T9PKhZ/d9+QCy8D8pawR0BZ8LXWWsEdSuuBJJNB04l2qzT9G+BfhGjmXrWpACD76LpoQt8SXrRX0+BR1/V0lXwIDAQAB",
+    "name": "Centinel",
+    "version": "1.0",
+    "description": "Powers up tools used by YourClient",
+    "author": "adelin.cavasi@3pillarglobal.com",
+    
+    "permissions": [
+      "storage",
+      "nativeMessaging"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },    
+    "content_scripts": [
+       {
+         "matches": ["https://*.yourclient.com:9443/*"],
+         "js": ["3rd-party/jquery.js", "scripts.js"]
+       }
+    ],
+    "icons": { 
+      "16": "images/centinel-16x16.png",
+      "32": "images/centinel-32x32.png",
+      "48": "images/centinel-48x48.png",
+      "128": "images/centinel-128x128.png" 
+    },
+    "manifest_version": 2
+  }
