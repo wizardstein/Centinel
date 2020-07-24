@@ -1,8 +1,9 @@
 (function(){
   let pfSenseloginClass = "loginCont";
+  let footerEl = document.getElementsByTagName("footer")[0];
   let subdomain = document.location.host.split(".")[0];
   let isPod = subdomain.endsWith("-pod");
-  let isPfSense = document.getElementsByTagName("footer")[0].innerText.indexOf("pfSense")!=-1;
+  let isPfSense = footerEl && footerEl.innerText.indexOf("pfSense")!=-1;
   let isLoggedIn = document.getElementsByClassName(pfSenseloginClass).length === 0;
   if (!(isPod && isPfSense && isLoggedIn))
     return
